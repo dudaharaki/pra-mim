@@ -1,0 +1,79 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #600e96, #8021bf);
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #08050a;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #8021bf;
+        }
+        #mensagem {
+            margin-top: 20px;
+            font-size: 1.2rem; /* Ajustei o tamanho aqui */
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease;
+            max-width: 80%; /* Limitei a largura do texto */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #mensagem.mostrar {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .coração {
+            font-size: 4rem;
+            animation: pulsar 1s infinite;
+            color: #ff6f61;
+        }
+        @keyframes pulsar {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Para minha girafinha🦒</h1>
+    <button onclick="mostrarMensagem()">Clique aqui</button>
+    <div id="mensagem">
+        <div class="coração">🤍</div>
+        <p>Oi, minha girafinha 🤍, Eu queria te dizer que cada dia ao teu lado tem sido como um presente inesperado, aquele que faz o coração bater mais forte e o sorriso aparecer sem motivo. Você tem uma forma única de transformar momentos simples em algo mágico, e eu me pego pensando em como a vida ficou mais bonita desde que você voltou. Gosto do jeito que você me faz sentir, como se eu pudesse alcançar as estrelas só de estar do teu lado. E não importa a distância ou o tempo, meu coração parece que já sabe que é teu. Só queria que você soubesse o quanto você é incrível para mim. Você é como uma girafinha mesmo: única, cheia de graça, com um jeitinho que se destaca entre todas as outras pessoas. Obrigada por ser quem você é, e por me deixar estar tão pertinho do teu mundo.</p>
+    </div>
+    <script>
+        function mostrarMensagem() {
+            const mensagem = document.getElementById('mensagem');
+            mensagem.classList.add('mostrar');
+        }
+    </script>
+</body>
+</html>
